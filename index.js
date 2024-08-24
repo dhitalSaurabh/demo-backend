@@ -11,8 +11,12 @@ app.use(express.urlencoded({ extended: false }));
 // routes
 app.use("/api/products", productRoute);
 
+// app.use("/" )
 app.get('/', (req, res) => {
-  res.send("Hello form node backend...!!!")
+  // res.send("Hello form node backend...!!!")
+  return res.json({
+    message: 'Welcome to the API',
+   });
 });
 
 app.get('/api/products', async (req, res) => {
